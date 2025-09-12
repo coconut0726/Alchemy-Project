@@ -12,5 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5718b0f16b74b6419c2f0cef2f44803, type: 3}
   m_Name: AlchemyDB
   m_EditorClassIdentifier: Assembly-CSharp::AlchemyDB
-  items: []
-  recipes: []
+  items:
+  - id: Apple
+    displayName: Apple
+    icon: {fileID: 21300000, guid: 4e54f03b98ad05b4c899e23125c8901c, type: 3}
+  - id: Banana
+    displayName: Banana
+    icon: {fileID: 21300000, guid: 0826de174b9c13442b15cfcd32ecf579, type: 3}
+  - id: Lemon
+    displayName: Lemon
+    icon: {fileID: 21300000, guid: 2ac310d35a3c7864a9a72f99ddf05ddd, type: 3}
+  recipes:
+  - a: Apple
+    b: Banana
+    r: Lemon
