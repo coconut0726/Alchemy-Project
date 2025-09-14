@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Linq;
-using System.Collections.Concurrent;
+using System.Collections;
 
 public class SideBarUI : MonoBehaviour
 {
@@ -9,10 +9,13 @@ public class SideBarUI : MonoBehaviour
 
     void OnEnable()
     {
-        RebuildAll();
+        StartCoroutine(BuildWhenReady());
 
         if (DiscoveryTracker.instance != null)
+        {
             DiscoveryTracker.instance.OnDiscovered += HandleDiscovered;
+            Debug.Log("+= HandleDiscovered");
+        }
     }
 
     void OnDisable()
@@ -22,6 +25,15 @@ public class SideBarUI : MonoBehaviour
     }
 
     void HandleDiscovered(string id) => AddButton(id);
+
+    IEnumerator BuildWhenReady()
+    {
+        // Wait until RecipeIndex exists
+        while (RecipeIndex.instance == null)
+            yield return null;
+
+        RebuildAll();
+    }
 
     void RebuildAll()
     {

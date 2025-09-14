@@ -6,7 +6,7 @@ using UnityEngine;
 public class DiscoveryTracker : MonoBehaviour
 {
     [Tooltip("IDs of items the player has at the beginning of the game")]
-    [SerializeField] private string[] startingIds = { "apple", "banana", "watermelon" };
+    [SerializeField] private string[] startingIds = { "apple", "banana", "lemon" };
 
     private HashSet<string> discovered = new(StringComparer.OrdinalIgnoreCase);
 
