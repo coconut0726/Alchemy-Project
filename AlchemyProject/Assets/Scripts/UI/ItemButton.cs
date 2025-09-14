@@ -38,8 +38,5 @@ public class ItemButton : MonoBehaviour, IPointerClickHandler
         if (spawner != null) {
             spawner.InitiateItem(defaultPos, itemRow);
         }
-
-
-
     }
 }
