@@ -20,7 +20,7 @@ public class ItemSruct : MonoBehaviour
     private void Start()
     {
 
-        Debug.Log("Item Initializing");
+        //Debug.Log("Item Initializing");
 
         if (string.IsNullOrEmpty(defaultItemID))
         {
@@ -41,13 +41,13 @@ public class ItemSruct : MonoBehaviour
     }
     public void SetItem(ItemRow item)
     {
-        Debug.Log(item.icon);
+        //Debug.Log(item.icon);
 
         itemID = item.id;
         itemName = item.displayName;
         icon = item.icon;
 
-        Debug.Log(icon);
+        //Debug.Log(icon);
 
         UpdateUI();
 
@@ -57,4 +57,5 @@ public class ItemSruct : MonoBehaviour
     {
         iconUI.sprite = icon;
     }
+
 }
