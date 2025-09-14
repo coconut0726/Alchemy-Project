@@ -53,6 +53,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         if (RecipeIndex.instance.TryCombine(itemSruct.itemID, droppedItem.itemID, out ItemRow result))
         {
             Debug.Log("Create" + result.displayName);
+            DiscoveryTracker.instance.MarkDiscovered(result.id);
 
             //Spawn
             ItemSpawner spawner = FindAnyObjectByType<ItemSpawner>();
