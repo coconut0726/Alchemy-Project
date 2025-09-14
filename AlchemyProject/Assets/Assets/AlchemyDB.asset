@@ -96,8 +96,8 @@ MonoBehaviour:
     b: Sword
     r: Heart
   - a: Human
-    b: Sword
-    r: Heart
+    b: Hat
+    r: DarkWizard
   - a: DarkWizard
     b: Heart
     r: LightWizard
@@ -110,9 +110,12 @@ MonoBehaviour:
   - a: Sheep
     b: Human
     r: MagicEgg
-  - a: Egg
+  - a: MagicEgg
     b: Potion
     r: MagicEssence
-  - a: Egg
-    b: Potion
-    r: MagicEssence
+  - a: MagicEssence
+    b: MagicEssence
+    r: WorldEnder
+  - a: Sheep
+    b: Hat
+    r: Human

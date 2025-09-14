@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+[DefaultExecutionOrder(-9999)]
 public class DiscoveryTracker : MonoBehaviour
 {
     [Tooltip("IDs of items the player has at the beginning of the game")]
