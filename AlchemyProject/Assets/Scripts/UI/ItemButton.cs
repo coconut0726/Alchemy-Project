@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 
-public class ItemButton : MonoBehaviour
+public class ItemButton : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private Image icon;
     [SerializeField] private TMP_Text buttonName;
