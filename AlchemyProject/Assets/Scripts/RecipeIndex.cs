@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 
+//This is needed to ensure this script always spawns before any others
+[DefaultExecutionOrder(-10000)]
 public class RecipeIndex : MonoBehaviour
 {
     [SerializeField] AlchemyDB db;

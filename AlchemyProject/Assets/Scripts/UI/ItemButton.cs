@@ -19,4 +19,11 @@ public class ItemButton : MonoBehaviour
         icon.sprite = row.icon;
         buttonName.text = row.displayName;
     }
+    public void OnPointerClick(PointerEventData e)
+    {
+        if (e.button != PointerEventData.InputButton.Left) return;
+
+        Debug.Log($"Button pressed for item: {itemId}");
+        // trigger whatever logic you want here (spawn, select, etc.)
+    }
 }
