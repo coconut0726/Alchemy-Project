@@ -10,12 +10,6 @@ public class SideBarUI : MonoBehaviour
     void OnEnable()
     {
         StartCoroutine(BuildWhenReady());
-
-        if (DiscoveryTracker.instance != null)
-        {
-            DiscoveryTracker.instance.OnDiscovered += HandleDiscovered;
-            Debug.Log("+= HandleDiscovered");
-        }
     }
 
     void OnDisable()
@@ -29,10 +23,11 @@ public class SideBarUI : MonoBehaviour
     IEnumerator BuildWhenReady()
     {
         // Wait until RecipeIndex exists
-        while (RecipeIndex.instance == null)
+        while (RecipeIndex.instance == null || DiscoveryTracker.instance == null)
             yield return null;
 
         RebuildAll();
+        DiscoveryTracker.instance.OnDiscovered += HandleDiscovered;
     }
 
     void RebuildAll()
