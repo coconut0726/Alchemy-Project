@@ -9,6 +9,12 @@ public class ItemButton : MonoBehaviour
     [SerializeField] private TMP_Text buttonName;
 
     private string itemId;
+    private ItemRow itemRow;
+
+    private void Start()
+    {
+        itemRow = RecipeIndex.instance.GetItem(itemId);
+    }
 
     //use id to read directly from DB
     public void InitWithId(string id)
@@ -25,5 +31,15 @@ public class ItemButton : MonoBehaviour
 
         Debug.Log($"Button pressed for item: {itemId}");
         // trigger whatever logic you want here (spawn, select, etc.)
+
+        //spawn item
+        Vector2 defaultPos = Vector2.zero;
+        ItemSpawner spawner = FindAnyObjectByType<ItemSpawner>();
+        if (spawner != null) {
+            spawner.InitiateItem(defaultPos, itemRow);
+        }
+
+
+
     }
 }

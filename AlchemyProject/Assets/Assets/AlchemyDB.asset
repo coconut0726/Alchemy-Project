@@ -22,7 +22,16 @@ MonoBehaviour:
   - id: Lemon
     displayName: Lemon
     icon: {fileID: 21300000, guid: 2ac310d35a3c7864a9a72f99ddf05ddd, type: 3}
+  - id: Grape
+    displayName: Grape
+    icon: {fileID: 21300000, guid: f633787b584f3214492718c2141ae053, type: 3}
   recipes:
   - a: Apple
     b: Banana
     r: Lemon
+  - a: Apple
+    b: Lemon
+    r: Grape
+  - a: Apple
+    b: Apple
+    r: Banana
