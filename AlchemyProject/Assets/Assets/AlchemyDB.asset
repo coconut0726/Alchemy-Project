@@ -13,25 +13,106 @@ MonoBehaviour:
   m_Name: AlchemyDB
   m_EditorClassIdentifier: Assembly-CSharp::AlchemyDB
   items:
-  - id: Apple
-    displayName: Apple
-    icon: {fileID: 21300000, guid: 4e54f03b98ad05b4c899e23125c8901c, type: 3}
-  - id: Banana
-    displayName: Banana
-    icon: {fileID: 21300000, guid: 0826de174b9c13442b15cfcd32ecf579, type: 3}
-  - id: Lemon
-    displayName: Lemon
-    icon: {fileID: 21300000, guid: 2ac310d35a3c7864a9a72f99ddf05ddd, type: 3}
-  - id: Grape
-    displayName: Grape
-    icon: {fileID: 21300000, guid: f633787b584f3214492718c2141ae053, type: 3}
+  - id: Wood
+    displayName: Wood
+    icon: {fileID: 21300000, guid: efe2ac1e04c61d1429e370eb4e493aa0, type: 3}
+  - id: Crate
+    displayName: Crate
+    icon: {fileID: 21300000, guid: 082f7453675a9e3468a060e0b75fafc7, type: 3}
+  - id: Sword
+    displayName: Sword
+    icon: {fileID: 21300000, guid: b2f3327f47464544293b6b9018e1296e, type: 3}
+  - id: Fire
+    displayName: Fire
+    icon: {fileID: 21300000, guid: 80e159dab3e6f1142bc5062eb184ccaf, type: 3}
+  - id: Meat
+    displayName: Meat
+    icon: {fileID: 21300000, guid: eab87f10d2afa594c92ed3d29451b618, type: 3}
+  - id: Scissor
+    displayName: Scissor
+    icon: {fileID: 21300000, guid: 72786b43084161c4c81e83eef0990e1a, type: 3}
+  - id: Wool
+    displayName: Wool
+    icon: {fileID: 21300000, guid: a88d5300df9790349866dcad93d3a1ea, type: 3}
+  - id: Scroll
+    displayName: Scroll
+    icon: {fileID: 21300000, guid: 60dbf6a31ffde4645b0ff2a518c88795, type: 3}
+  - id: Human
+    displayName: Human
+    icon: {fileID: 21300000, guid: 4ae49494a73ff584099f601cb159abba, type: 3}
+  - id: LightWizard
+    displayName: LightWizard
+    icon: {fileID: 21300000, guid: 4836c09be31426e49b52ea966be0a3c8, type: 3}
+  - id: Heart
+    displayName: Heart
+    icon: {fileID: 21300000, guid: 222d62d87db5931498bb85845842b0d3, type: 3}
+  - id: Sheep
+    displayName: Sheep
+    icon: {fileID: 21300000, guid: 6a6c98a6079537844ab0f7b2b45425b3, type: 3}
+  - id: Hat
+    displayName: Hat
+    icon: {fileID: 21300000, guid: 5087bdcc637973d41abbd18802fb23d3, type: 3}
+  - id: DarkWizard
+    displayName: Dark Wizard
+    icon: {fileID: 21300000, guid: 31b17986fa5b13f4f9b7403589287a19, type: 3}
+  - id: Tear
+    displayName: Tear
+    icon: {fileID: 21300000, guid: 2092e1ae9910a3743a653ebf2e627c0c, type: 3}
+  - id: Potion
+    displayName: Potion
+    icon: {fileID: 21300000, guid: db005d11213e5da47b9769c2e6c56eee, type: 3}
+  - id: MagicEgg
+    displayName: Magic Egg
+    icon: {fileID: 21300000, guid: e0c7d5a920e98fd47a926292adc0bec7, type: 3}
+  - id: WorldEnder
+    displayName: World Ender
+    icon: {fileID: 21300000, guid: 5c08bbcce060bf24c8074d9f4d593e63, type: 3}
+  - id: MagicEssence
+    displayName: Magic Essence
+    icon: {fileID: 21300000, guid: 8a14f58b4b600a24ab3fcf9cb3bc82fb, type: 3}
   recipes:
-  - a: Apple
-    b: Banana
-    r: Lemon
-  - a: Apple
-    b: Lemon
-    r: Grape
-  - a: Apple
-    b: Apple
-    r: Banana
+  - a: Wood
+    b: Wood
+    r: Crate
+  - a: Crate
+    b: Sword
+    r: Sheep
+  - a: Sheep
+    b: Sword
+    r: Meat
+  - a: Sword
+    b: Sword
+    r: Scissor
+  - a: Sheep
+    b: Scissor
+    r: Wool
+  - a: Wool
+    b: Wool
+    r: Scroll
+  - a: Scroll
+    b: Wool
+    r: Hat
+  - a: Human
+    b: Sword
+    r: Heart
+  - a: Human
+    b: Sword
+    r: Heart
+  - a: DarkWizard
+    b: Heart
+    r: LightWizard
+  - a: Sheep
+    b: Meat
+    r: Tear
+  - a: Tear
+    b: Heart
+    r: Potion
+  - a: Sheep
+    b: Human
+    r: MagicEgg
+  - a: Egg
+    b: Potion
+    r: MagicEssence
+  - a: Egg
+    b: Potion
+    r: MagicEssence
