@@ -14,13 +14,13 @@ public class ItemButton : MonoBehaviour, IPointerDownHandler
     private string itemId;
     private ItemRow itemRow;
 
-    /*private void Awake()
+    private void Awake()
     {
         if (parent == null)
     {
         parent = FindFirstObjectByType<Canvas>().GetComponent<RectTransform>();
     }
-    }*/ //if you want the item spawn at where the mouse is
+    } //if you want the item spawn at where the mouse is
     private void Start()
     {
         itemRow = RecipeIndex.instance.GetItem(itemId);
@@ -42,8 +42,9 @@ public class ItemButton : MonoBehaviour, IPointerDownHandler
         Debug.Log($"Button pressed for item: {itemId}");
         // trigger whatever logic you want here (spawn, select, etc.)
 
-        Vector2 defaultPos = Vector2.zero;
+        Vector2 defaultPos = new Vector2(Random.Range(-200f, 200f), Random.Range(-200f, 200f));
         Vector2 localPoint;
+
         if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
             parent,
             e.position,
