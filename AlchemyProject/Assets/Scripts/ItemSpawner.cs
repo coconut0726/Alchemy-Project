@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -5,6 +6,7 @@ public class ItemSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject itemPrefab;
     [SerializeField] private RectTransform parent;
+    [SerializeField] private TMP_Text itemName;
 
     public GameObject InitiateItem(Vector2 anchoredPos, ItemRow item) {
         if (itemPrefab == null) {
@@ -23,6 +25,16 @@ public class ItemSpawner : MonoBehaviour
         }
         else {
             Debug.LogWarning("No ItemStruct Component Found");
+        }
+
+        itemName = obj.GetComponentInChildren<TMP_Text>();
+        if (itemName != null)
+        {
+            itemName.text = item.displayName;
+        }
+        else
+        {
+            Debug.LogWarning("No TMP_Text found in itemPrefab's children");
         }
 
         return obj;

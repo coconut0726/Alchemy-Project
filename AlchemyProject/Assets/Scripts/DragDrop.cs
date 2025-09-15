@@ -79,5 +79,13 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
     }
+
+    public void StartDrag(PointerEventData eventData)
+    {
+        canvasGroup.alpha = .6f;
+        canvasGroup.blocksRaycasts = false;
+
+        rectTransform.position = eventData.position;
+    }
 }
 
